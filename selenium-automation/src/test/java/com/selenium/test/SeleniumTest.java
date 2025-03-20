@@ -28,25 +28,18 @@ public class SeleniumTest {
 		WebElement SignInbutton = driver.findElement(By.xpath("//*[@id=\"main-header\"]/div/div/div/div/nav/div[2]/ul/li[2]/a"));
 		SignInbutton.click();	
 		
-
         // Switch to the alert
         Alert alert = driver.switchTo().alert();
         alert.accept();
-
-        WebElement emailfield = driver.findElement(By.xpath("//input[@name='email']"));
-		emailfield.sendKeys("milanjayasinghebc@gmail.com");
 		
-	//	WebElement nextbutton = driver.findElement(By.xpath("//button[@type='submit']"));
-		//nextbutton.click();
-		
-		WebElement namefield = driver.findElement(By.xpath("//input[@name='name']"));
-		WebElement passwordfield = driver.findElement(By.xpath("//input[@name='newPassword']"));
+		WebElement namefield = driver.findElement(By.xpath("//input[@id='email']"));
+		WebElement passwordfield = driver.findElement(By.xpath("//input[@id='password']"));
 		
 		namefield.sendKeys("Milan Jayasinghe");
 		passwordfield.sendKeys("123456");
 
 
-        driver.close();
+        driver.close(); 
     }
 }
 
